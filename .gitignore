@@ -1,0 +1,69 @@
+# --- Environments ---
+.venv/
+venv/
+env/
+filigrane-malin-env/
+__pycache__/
+*.pyc
+build/
+dist/
+
+# --- Streamlit & Secrets ---
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# --- Secrets & Credentials ---
+.env
+.env.*
+*.yaml
+*.toml
+
+# --- AWS & Local Data ---
+*.parquet
+*.csv
+*.xls
+*.xlsx
+.aws/
+*.json
+*.zip
+*.png
+*.eml
+*.msg
+*.pdf
+*.jpeg
+*.ico
+*.svg
+*.webp
+*.jpg
+*.mp4
+
+
+# --- Local Databases ---
+*.mdf
+*.ldf
+*.bak
+*.db
+*.sqlite
+
+# --- Notes ---
+*.doc
+*.docx
+*.pdf
+*.txt
+# Except requirements & license files
+!requirements.txt
+!LICENSE.txt
+
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- Development Tools ---
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
