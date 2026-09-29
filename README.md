@@ -1,5 +1,6 @@
 # 🦊 Filigrane Malin
 
+[English version](#english-version)
 
 ## **L'alternative 100% hors-ligne, intelligente & sécurisée pour protéger vos documents d'identité.**
 
@@ -58,3 +59,65 @@ Allez dans la section **[Releases](../../releases)** de ce dépôt (sur la droit
  *Filigrane Malin est un outil fourni 'tel quel', sans garantie d'aucune sorte, explicite ou implicite. L'utilisateur reste seul responsable de l'utilisation de ses documents et du respect des exigences des organismes destinataires. Veuillez vous référer au fichier LICENSE.txt pour plus d'informations.*
  
 *Vibe-codé avec Google Gemini & 💙🤍❤️ pour la protection de la vie privée des Français(es).*  
+
+
+---
+
+<a id="english-version"></a>
+# 🦊 Filigrane Malin
+
+## **The 100% offline, smart & secure alternative to protect your identity documents.**
+
+
+## 🛑 Why *Filigrane Malin*?
+
+**Filigrane Malin** addresses the need for personal data protection by offering the ability to watermark and protect a PDF document or an image with a password through a process executed **100% locally on your own machine**. No information leaves your computer during the secure document creation process, only when **YOU** decide to (potentially) share it after securing it.
+
+The official government service [`filigrane.beta.gouv.fr`](https://filigrane.beta.gouv.fr/) is an excellent initiative on paper. However, it requires users to upload their most sensitive documents (ID cards, passports, pay slips, tax notices...) to remote servers **BEFORE** applying the watermark and any potential cryptographic protection. While this does not violate GDPR provisions, this process exposes vulnerable users to residual risks they do not always understand. **There is a major difference between regulatory compliance and maximum security.**
+
+At a time when personal data thefts affecting French citizens are multiplying across public services, sports associations, and large corporations, it must be understood that **uploading an unencrypted and unwatermarked identity document to a third-party server always presents a risk and unnecessarily exposes users to data theft and potential identity fraud** (which, as a reminder, affects over 200,000 people in France every year).
+
+* **A promise is not a shield:** GDPR is a legal framework, not a firewall. It does not protect against zero-day vulnerabilities, server misconfigurations, unauthorized access by state personnel, or data interception while in transit from your computer to government servers.
+* **A residual "window of vulnerability":** Even if `filigrane.beta.gouv.fr` promises instant deletion of the uploaded file and the generated file after download (or within a maximum of 24 hours if you don't download it), your unsecured document must still leave your computer, travel across the Internet, and reside (even briefly) on government servers. If that server is compromised at that exact moment, the deletion script is useless: the data has already been copied.
+* **The honey & the bees:** Given that the entire country is invited to upload their ID cards and other sensitive documents to a single Internet address, this server becomes a massive, high-value target (a "honeypot"🍯) for hackers (hoping these lines don't inspire any vocations...).
+
+**Filigrane Malin** allows for maximum mitigation of these risks by allowing you to apply the watermark and cryptographic protection (optional) **100% locally** on your computer.
+
+## ✨ Advanced Features
+
+Besides the 100% local processing, *Filigrane Malin* includes the following distinctive elements:
+
+* **Sine-wave distortion:** The watermark text follows a wavy baseline, making removal via Photoshop or generative AI much more complex and time-consuming.
+* **Alternating typography & drop shadow:** Alternating colored lines with drop shadows to ensure contrast on any background.
+* **User-customizable watermark:** In addition to the textual content of the watermark applied to the document, the user can modify font size and colors, text orientation, and the intensity of the sine-wave distortion.
+* **Multi-format support:** Processes PDF documents or images (PNG, JPG, JPEG) and outputs them as secured PDF documents without quality loss.
+* **Password protection & AES-128 encryption:** More than just an image processor, *Filigrane Malin* is a true OPSEC Zero-Trust utility (Operational Security in Zero-Trust mode). Equipped with a built-in password generator that uses Python's *secrets* cryptographic module to create robust, high-entropy passwords of 16 characters combining uppercase, lowercase, numbers, and special characters, it complies with the [official CNIL recommendations](https://www.cnil.fr/fr/mots-de-passe-recommandations-pour-maitriser-sa-securite) for secure password creation.
+* **Educational tool:** By educating the user on the principles of creating *truly* secure passwords, and encouraging them to separate the payload (the document) from the key (the password) using two distinct communication channels, *Filigrane Malin* aims to popularize the methods applied by cybersecurity professionals to handle sensitive data for the general public. Furthermore, if the user wishes to create their own password, *Filigrane Malin* also allows them to evaluate its strength by displaying the estimated cracking time. Finally, the application displays a warning regarding password reuse as soon as the user enters their own password instead of using the built-in generator, and provides external links to educational sites on secure password creation and management.
+
+## 🚀 Installation
+
+### 📌 No-code option for everyone
+
+Go to the **[Releases](https://www.google.com/search?q=../../releases)** section of this repository (on the right side of this screen) and follow the instructions.
+
+### 📌 Source code option for devs...
+
+... who don't need instructions 😉
+
+## 🛠️ Technical Stack
+
+**Python Version:** 3.13.2
+
+**User Interface:** Streamlit
+
+**Image Processing:** Pillow
+
+**PDF Processing:** PyMuPDF
+
+**Password Generation:** Secrets
+
+***Legal Disclaimer:***
+
+*Filigrane Malin is an tool provided 'as is', without warranty of any kind, express or implied. The user remains solely responsible for the use of their documents and compliance with the requirements of the receiving organizations. Please refer to the LICENSE.txt file for more information.*
+
+*Vibe-coded with Google Gemini & 💙🤍❤️ for the privacy protection of French citizens.*
