@@ -6,6 +6,7 @@
 
 ![Démonstration de Filigrane Malin](./demo.gif)
 
+> 🐳 **NOUVEAU :** Désormais disponible en conteneur Docker ! Prêt à être déployé localement pour les utilisateurs avancés.
 
 ## 🛑 Pourquoi *Filigrane Malin* ?
 
@@ -39,7 +40,7 @@ Outre le traitement 100% local, *Filigrane Malin* inclut les éléments distinct
 ### 📌 Option no-code pour tou(te)s
 Allez dans la section **[Releases](../../releases)** de ce dépôt (sur la droite de cet écran) et suivez les instructions.
 
-### 📌 Option code source pour les devs...
+### 📌 Option conteneur & code source pour les devs...
 ... qui n'ont pas besoin d'instructions 😉  
 
 
@@ -68,6 +69,7 @@ Allez dans la section **[Releases](../../releases)** de ce dépôt (sur la droit
 
 ## **The 100% offline, smart & secure alternative to protect your identity documents.**
 
+🐳 NEW: Now available as a Docker container! Ready for zero-trust local deployment.
 
 ## 🛑 Why *Filigrane Malin*?
 
@@ -100,11 +102,11 @@ Besides the 100% local processing, *Filigrane Malin* includes the following dist
 
 Go to the **[Releases](https://www.google.com/search?q=../../releases)** section of this repository (on the right side of this screen) and follow the instructions.
 
-### 📌 Source code option for devs...
+### 📌 Container & Source code option for devs...
 
 ... who don't need instructions 😉
 
-## 🛠️ Technical Stack
+## 🛠️ Tech Stack
 
 **Python Version:** 3.13.2
 
