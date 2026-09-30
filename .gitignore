@@ -36,8 +36,6 @@ dist/
 *.webp
 *.jpg
 *.mp4
-Medium/
-
 
 # --- Local Databases ---
 *.mdf
@@ -54,7 +52,8 @@ Medium/
 # Except requirements & license files
 !requirements.txt
 !LICENSE.txt
-
+/Medium
+.cache_ggshield
 
 # --- OS Specific ---
 .DS_Store
