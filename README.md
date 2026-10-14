@@ -4,9 +4,11 @@
 
 ## **L'alternative 100% hors-ligne, intelligente & sécurisée pour protéger vos documents d'identité.**
 
+## 🐳 **NOUVEAU :** Désormais disponible en conteneur Docker ! Prêt à être déployé localement pour les utilisateurs avancés.
+
 ![Démonstration de Filigrane Malin](./demo.gif)
 
-> 🐳 **NOUVEAU :** Désormais disponible en conteneur Docker ! Prêt à être déployé localement pour les utilisateurs avancés.
+
 
 ## 🛑 Pourquoi *Filigrane Malin* ?
 
@@ -69,7 +71,7 @@ Allez dans la section **[Releases](../../releases)** de ce dépôt (sur la droit
 
 ## **The 100% offline, smart & secure alternative to protect your identity documents.**
 
-🐳 NEW: Now available as a Docker container! Ready for zero-trust local deployment.
+## 🐳 NEW: Now available as a Docker container! Ready for zero-trust local deployment.
 
 ## 🛑 Why *Filigrane Malin*?
 
