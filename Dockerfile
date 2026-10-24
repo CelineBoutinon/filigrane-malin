@@ -4,10 +4,13 @@ FROM python:3.13-slim
 # Set the working directory
 WORKDIR /app
 
-# Install system dependencies (required for Pillow/PyMuPDF C-extensions)
+# Install system dependencies and force certificate store update
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
+    ca-certificates \
+    && apt-get upgrade -y ca-certificates \
+    && update-ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements and install
