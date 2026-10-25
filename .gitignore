@@ -17,6 +17,9 @@ dist/
 .env.*
 *.yaml
 *.toml
+# Keep the following file for GitHub Pages
+!_config.yaml
+
 
 # --- AWS & Local Data ---
 *.parquet
