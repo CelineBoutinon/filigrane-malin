@@ -1,6 +1,8 @@
+<a id="french-version"></a>
+
 # 🦊 Filigrane Malin
 
-[English version](#english-version)
+[🇬🇧 English version](#english-version)
 
 ## **L'alternative 100% hors-ligne, intelligente & sécurisée pour protéger vos documents d'identité.**
 
@@ -40,7 +42,7 @@ Outre le traitement 100% local, *Filigrane Malin* inclut les éléments distinct
 ## 🚀 Installation
 
 ### 📌 Option no-code pour tou(te)s
-Allez dans la section **[Releases](../../releases)** de ce dépôt (sur la droite de cet écran) et suivez les instructions.
+Allez dans la section **[Releases](https://github.com/CelineBoutinon/filigrane-malin/releases)** de ce dépôt (sur la droite de cet écran) et suivez les instructions.
 
 ### 📌 Option conteneur & code source pour les devs...
 ... qui n'ont pas besoin d'instructions 😉  
@@ -68,6 +70,7 @@ Allez dans la section **[Releases](../../releases)** de ce dépôt (sur la droit
 
 <a id="english-version"></a>
 # 🦊 Filigrane Malin
+[🇫🇷 Version française](#french-version)
 
 ## **The 100% offline, smart & secure alternative to protect your identity documents.**
 
@@ -102,7 +105,7 @@ Besides the 100% local processing, *Filigrane Malin* includes the following dist
 
 ### 📌 No-code option for everyone
 
-Go to the **[Releases](https://www.google.com/search?q=../../releases)** section of this repository (on the right side of this screen) and follow the instructions.
+Go to the **[Releases](https://github.com/CelineBoutinon/filigrane-malin/releases)** section of this repository (on the right side of this screen) and follow the instructions.
 
 ### 📌 Container & Source code option for devs...
 
