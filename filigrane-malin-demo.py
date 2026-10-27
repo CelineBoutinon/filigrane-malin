@@ -467,7 +467,7 @@ if uploaded_file is not None:
             preview_doc.authenticate(pdf_password)
 
         #  Render the first page as a PNG for Streamlit
-            preview_pix = preview_doc[0].get_pixmap(dpi=150)
+        preview_pix = preview_doc[0].get_pixmap(dpi=150)
 
         st.image(
             preview_pix.tobytes("png"), 
