@@ -39,6 +39,8 @@ dist/
 *.webp
 *.jpg
 *.mp4
+# dummy french ID for Streamlit Community Cloud demo
+!CI_dummy.pdf 
 
 # --- Local Databases ---
 *.mdf
