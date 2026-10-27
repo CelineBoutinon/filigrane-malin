@@ -8,10 +8,6 @@ import string
 from st_copy_to_clipboard import st_copy_to_clipboard
 from datetime import datetime
 
-# Note : use 
-# pyinstaller --noconsole --clean --collect-all streamlit --collect-all PIL --collect-all pymupdf --collect-all st_copy_to_clipboard run.py
-# to build the binaries for the GitHub release. The --noconsole flag is important to avoid a console window popping up on Windows.
-# The rename dist/run.exe as dist/FiligraneMalin.exe and ensure this app is copied alongside it before zipping and releasing.
 
 st.set_page_config(
     page_title="Filigrane Malin",
@@ -135,7 +131,7 @@ today_str = datetime.now().strftime("%d/%m/%Y")
 default_text = f"Document fourni le {today_str} exclusivement à [Nom de l'organisme]"
 watermark_text = st.sidebar.text_input("Texte (maxi. 100 caractères)", value=default_text, max_chars=100)
 
-# Create 4 columns: Size (2), Color 1 (1), Color 2 (1)
+# Create 4 columns
 col_size, col_c1, col_c2 = st.sidebar.columns([2, 1, 1], vertical_alignment="bottom")
 
 with col_size:
@@ -287,23 +283,14 @@ col_left, col_right = st.columns(2, gap="medium")
 with col_left:
     st.markdown("##### 📁 Étape 2 - Sélectionnez le document à sécuriser")
 
-    # st.info("💡 To protect your privacy in this cloud demo, file uploads are disabled. Click below to test the watermarking engine with a sample document.")
-
     uploaded_file = None
-
-    # uploaded_file = st.file_uploader(
-    #     label="Formats acceptés: PDF, PNG, JPG (20Mo max)", 
-    #     type=["pdf", "png", "jpg", "jpeg"],
-    #     label_visibility="visible",
-    #     help="Glissez-déposez votre document ici ou cliquez 'Upload'"
-    # )
 
     if "dummy_loaded" not in st.session_state:
         st.session_state.dummy_loaded = False
 
     if st.button("Générer le specimen de document"):
         st.session_state.dummy_loaded = True
-        st.success("Specimen généré! Vous pouvez maintenant tested la genetration du mot de passe et du filigrane sur ce document.")
+        st.success("Specimen généré! Vous pouvez maintenant tester la génération du mot de passe et du filigrane sur ce document.")
 
     uploaded_file = None
     if st.session_state.dummy_loaded:
@@ -311,17 +298,7 @@ with col_left:
             uploaded_file = io.BytesIO(f.read())
             uploaded_file.name = "CI_dummy.pdf"
     
-    # Help section for office document formats tucked neatly below
-    # with st.expander(icon="❓", label="Vous avez un document Microsoft Word (.docx), Apple Pages (.pages) ou LibreOffice/OpenOffice (.odt)"):
-    #     st.markdown("""
-    #**Filigrane Malin** n'accepte pas directement ces formats. Aucun téléchargement supplémentaire n'est nécessaire pour convertir votre fichier, vous pouvez simplement utiliser les fonctions intégrées à votre ordinateur :
-    # * **Sur Microsoft Word / LibreOffice :** Allez dans `Fichier` > `Enregistrer sous` > Choisissez le format **PDF**.
-    # * **Sur Apple Pages :** Allez dans `Fichier` > `Exporter vers` > **PDF**.
-    # * **Alternative universelle :** Faites `Ctrl+P` (ou `Cmd+P` sur Mac) pour ouvrir le menu d'impression, et choisissez **"Imprimer en PDF"** ou **"Enregistrer au format PDF"**.
     
-    # Une fois le PDF sauvegardé, sélectionnez-le ci-dessus !
-    # """)
-
 with col_right:
     st.markdown("##### 🔏 Étape 3 (facultative) - Ajouter un mot de passe ")
     
@@ -470,8 +447,7 @@ if uploaded_file is not None:
     # Display success and download button ONLY after generation button is clicked
     if st.session_state.pdf_bytes is not None:
         if pdf_password:
-            st.success(f"🥂 Votre document sécurisé '{st.session_state.pdf_filename}' est prêt ! Vous pourrez en modifier le nom à l'étape suivante.")
-            st.info(
+            st.success(f"🥂 Votre document sécurisé '{st.session_state.pdf_filename}' est prêt !" 
                             "💡 **Conseil :** Assurez-vous d'avoir sauvegardé le mot de passe dans un endroit sûr, comme par exemple "
                             "un [gestionnaire de mots de passe](https://www.francenum.gouv.fr/guides-et-conseils/protection-contre-les-risques/cybersecurite/pourquoi-et-comment-utiliser-un) avant de fermer cette application."
                         )
@@ -482,17 +458,7 @@ if uploaded_file is not None:
         else:
             st.success(f"🥂 Votre document sécurisé '{st.session_state.pdf_filename}' est prêt ! Vous pourrez en modifier le nom à l'étape suivante.")
             
-        # st.download_button(
-        #     label="💾 Étape 5 - Sauvegardez votre document sécurisé",
-        #     data=st.session_state.pdf_bytes,
-        #     file_name=st.session_state.pdf_filename,
-        #     mime="application/pdf"
-        # )
-
-        # st.image(st.session_state.pdf_bytes, caption="Aperçu du document filigrané", use_container_width=True)
-
-
-
+        
         # Open the generated PDF from memory to extract a preview image
         preview_doc = pymupdf.open(stream=st.session_state.pdf_bytes, filetype="pdf")
 
