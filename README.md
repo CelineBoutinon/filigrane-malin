@@ -6,6 +6,7 @@
 
 ## **L'alternative 100% hors-ligne, intelligente & sécurisée pour protéger vos documents d'identité.**
 
+## 🕹️ **DÉMO EN LIGNE :** [Tester l'application sur Streamlit Community Cloud](https://filigrane-malin-demo.streamlit.app/) *(Spécimen pré-chargé, aucun transfert de document réel possible)*
 ## 🐳 **NOUVEAU :** Désormais disponible en conteneur Docker ! Prêt à être déployé localement pour les utilisateurs avancés.
 
 ![Démonstration de Filigrane Malin](./demo.gif)
@@ -74,6 +75,8 @@ Allez dans la section **[Releases](https://github.com/CelineBoutinon/filigrane-m
 
 ## **The 100% offline, smart & secure alternative to protect your identity documents.**
 
+
+## 🕹️ **LIVE DEMO:** [Try the Streamlit Community Cloud Demo](https://filigrane-malin-demo.streamlit.app/) *(Pre-loaded dummy document, zero real document uploads allowed)*
 ## 🐳 NEW: Now available as a Docker container! Ready for zero-trust local deployment.
 
 ## 🛑 Why *Filigrane Malin*?
