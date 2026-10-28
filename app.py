@@ -8,10 +8,6 @@ import string
 from st_copy_to_clipboard import st_copy_to_clipboard
 from datetime import datetime
 
-# Note : use 
-# pyinstaller --noconsole --clean --collect-all streamlit --collect-all PIL --collect-all pymupdf --collect-all st_copy_to_clipboard run.py
-# to build the binaries for the GitHub release. The --noconsole flag is important to avoid a console window popping up on Windows.
-# The rename dist/run.exe as dist/FiligraneMalin.exe and ensure this app is copied alongside it before zipping and releasing.
 
 st.set_page_config(
     page_title="Filigrane Malin",
